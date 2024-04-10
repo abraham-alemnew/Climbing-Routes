@@ -2,38 +2,59 @@
 <html>
 
 <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles">
+    <title>Rock Climbing Routes</title>
+    <meta name="description" content="A Catalog of Rock Climbing Routes">
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="scripts.js"></script>
 </head>
 
+
+
+
 <body>
-    <header class="main-header">
-        <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container">
-        
+<header class="main-header">
+    <h1 class="title">Rock Climbing Routes</h1>
+</header>
+<div id="filter-options" style="display: none;">
+    <div>
+        <input type="checkbox" id="crack-checkbox"> <label for="crack-checkbox">Crack</label><br>
+        <input type="checkbox" id="boulder-checkbox"> <label for="boulder-checkbox">Boulder</label><br>
+        <input type="checkbox" id="lead-checkbox"> <label for="lead-checkbox">Lead</label><br>
+        <input type="checkbox" id="top-rope-checkbox"> <label for="top-rope-checkbox">Top rope</label><br>
     </div>
-    <div class="card" style="display: none;">
-        <div class="card-content">
-            <h2>TV Show Title</h2>
-            <img src="" alt="TV Show Poster">
-            <ul>
-                <li>Bullet Point 1</li>
-                <li>Bullet Point 2</li>
-                <li>Bullet Point 3</li>
-            </ul>
-        </div>
+    <div>
+        <label for="min-v-level">Min V Level:</label>
+        <input type="number" id="min-v-level" min="1" max="10" value="1">
     </div>
-    <div class="footer">
-        <button onclick="quoteAlert();">
-            Get A Quote!
-        </button>
-        <button onclick="removeLastCard();">
-            Remove A Card!
-        </button>
+    <div>
+        <label for="max-v-level">Max V Level:</label>
+        <input type="number" id="max-v-level" min="1" max="10" value="10">
     </div>
+    <button onclick="applyFilters()">Apply Filter</button>
+    <button onclick="selectAll()">Select All</button>
+    <button onclick="clearAll()">Clear All</button>
+</div>
+
+
+
+<div class="footer">
+    <button onclick="toggleFilterOptions();">Filter Options</button>
+    <button onclick="quoteAlert();">Get A Quote!</button>
+    <button onclick="removeLastCard();">Remove A Card!</button> <!-- Added data-action attribute -->
+    <button onclick="addCard();">Add Card</button>
+
+</div>
+<div id="card-container"></div>
+<div class="card" style="display: none;">
+    <div class="card-content">
+        <h2>TV Show Title</h2>
+        <img src="" alt="TV Show Poster">
+        <p class="difficulty-type"></p>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
 </body>
+
 
 </html>

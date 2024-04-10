@@ -1,7 +1,8 @@
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
+    background-image: url("https://media.istockphoto.com/id/1472736845/photo/climb-climber-adventure-panorama-background-banner-black-silhouette-of-climbers-on-a-cliff.webp?b=1&s=170667a&w=0&k=20&c=-vohF4nKpVsl5ARaoVE05sYAwJZoo_O2WI1VzJ1U6No=");
+    background-size: cover;
 }
 
 .main-header {
@@ -13,10 +14,14 @@ body {
     text-align: center;
     margin: 0;
     font-size: 8em;
-    font-family: "Helvetica";
-    font-weight: normal;
-    color: white;
+    font-family: "Papyrus";
+    font-weight: bold;
+    color: brown;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+
 }
+
 
 #card-container {
     display: flex;
@@ -34,8 +39,10 @@ body {
 
 .card-content {
     padding: 20px;
-    font-family: "Verdana";
-    color: #777;
+    font-family: "Papyrus";
+    color: brown;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
 }
 
 .card-content h2 {
@@ -45,7 +52,7 @@ body {
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .footer {
@@ -68,3 +75,4 @@ button {
     cursor: pointer;
     margin: 5px;
 }
+
